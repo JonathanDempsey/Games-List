@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!-- Title -->
+	<title>Game Wish List</title>
+	
+	<!-- Stylesheet link -->
+	<link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+	
+	<!-- Header -->
+	<div id="header">
+		<span class="title">Game Wish List</span>
+	</div>
+
+	<!-- Sidebar -->
+	<div id="sidebar"></div>
+
+	<!-- Content -->
+	<div id="content">
+		<h2>Game Wish List</h2>
+		<p> Create a list of games you would like to play! </p>
+	</div>
+
+	<!-- Header template -->
+	<script type="text/template" id="tpl-header">
+		<button class="new">New Game</button>
+	</script>
+
+	<!-- Games list template -->
+	<script type="text/template" id="tpl-game-list-item">
+		<a href='#games/<%= _id %>'><%= name %></a>
+	</script>
+
+	<!-- Games details template -->
+	<script type="text/template" id="tpl-game-details">
+		<div class="form-left-col">
+			<label>Id:</label>
+			<input type="text" id="gameId" name="_id" value="<%= _id %>" disabled />
+			
+			<label>Name:</label>
+			<input type="text" id="name" name="name" value="<%= name %>" required/>
+			
+			<label>Publisher:</label>
+			<input type="text" id="publisher" name="publisher" value="<%= publisher %>"/>
+			
+			<label>Console:</label>
+			<input type="text" id="console" name="console" value="<%= console %>"/>
+			
+			<label>Price:</label>
+			<input type="text" id="price" name="price"  value="<%= price %>"/>
+			
+			<label>Release Date:</label>
+			<input type="text" id="releaseDate" name="releaseDate"  value="<%= releaseDate %>"/>
+			
+			<button class="save">Save</button>
+			<button class="delete">Delete</button>
+		</div>
+
+		<div class="form-right-col">
+			<img height="300" src="../pics/<%= picture %>"/>
+			<label>Notes:</label>
+			<textarea id="description" name="description"><%= description %></textarea>
+		</div>
+	</script>
+
+	<!-- JavaScript -->
+	<script src="../lib/jquery-1.7.1.min.js"></script>
+	<script src="../lib/underscore-min.js"></script>
+	<script src="../lib/backbone-min.js"></script>
+	<script src="js/main.js"></script>   
+
+	</body>
+</html>

@@ -1,0 +1,9 @@
+{
+        "name":"Bioshock Infinite",
+        "publisher":"Irrational Games",
+        "console":"Xbox 360",
+        "price":"49.99",
+        "releaseDate":"March 26, 2013",
+        "description":"...",
+        "picture":"Bioshock Infinite.jpg"
+}
